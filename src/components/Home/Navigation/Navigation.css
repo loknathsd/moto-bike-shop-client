@@ -1,0 +1,11 @@
+.nav-area{
+
+}
+.nav-area a{
+    color:black;
+    text-decoration: none;
+}
+.nav-area h4{
+    font-weight: bold;
+    color: red;
+}

@@ -1,0 +1,16 @@
+.sidebar-area span{
+    font-size: 20px;
+    margin-right: 10px;
+    color: lightslategray;
+}
+.sidebar-area h1{
+    color: lightslategray;
+    font-weight: bold;
+}
+.sidebar-area a{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+}
