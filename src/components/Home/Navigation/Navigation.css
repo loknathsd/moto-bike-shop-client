@@ -4,6 +4,8 @@
 .nav-area a{
     color:black;
     text-decoration: none;
+    text-transform: uppercase;
+    
 }
 .nav-area h4{
     font-weight: bold;

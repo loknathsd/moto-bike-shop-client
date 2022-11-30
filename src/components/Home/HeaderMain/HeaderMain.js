@@ -19,7 +19,7 @@ const HeaderMain = () => {
                                   <small>205hp(151kw)</small>
                               </div>
                            </div>
-                           <div className="col d-flex">
+                           <div className="col d-flex mt-3  ">
                            <span><FontAwesomeIcon icon={faCogs} size="3x" /></span>
                               <div className='ms-3'>
                                   <h4>Engine type</h4>
