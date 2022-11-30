@@ -11,8 +11,8 @@ const HeaderMain = () => {
                     <div className="col-md-6">
                         <h1 style={{color:'#333' ,fontSize:'60px',fontWeight: '700',marginBottom:'25px'}}>World most <br /> powerful bike</h1>
                         <p className='text-secondary'>Wondering which BMW bike you should buy? We are here to help you purchase best bike as per your budget and needs. We provide you the genuine user reviews from the real bike owners, latest prices, updated specifications,best available offers for all BMW bike models of 2022</p>
-                        <div className='row my-4'>
-                           <div className="col-md d-flex">
+                        <div className='row my-4 '>
+                           <div className="col-md d-flex mt-3">
                               <span><FontAwesomeIcon icon={faMotorcycle} size="3x" /></span>
                               <div className='ms-3'>
                                   <h4>Engine Power</h4>

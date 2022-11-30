@@ -1,5 +1,7 @@
 import { faFacebookSquare, faFontAwesome, faLinkedinIn, faTwitter, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+// import { AiFillFacebook } from 'react-icons/ai';
 import React from 'react';
 
 const Footer = () => {
@@ -41,10 +43,10 @@ const Footer = () => {
                         <h3>About us</h3>
                         <p className='text-secondary mt-3'>MotoBike is the first and largest website about motorcycle in Bangladesh. We have started our journey since 25th January 2012....</p>
                         <div className="">
-                            <a className='p-3 text-white' href=""> <FontAwesomeIcon size='2x' icon={faFacebookSquare} /> </a>
-                            <a className='p-3 text-white' href=""> <FontAwesomeIcon size='2x' icon={faYoutubeSquare} /> </a>
-                            <a className='p-3 text-white' href=""> <FontAwesomeIcon size='2x' icon={faLinkedinIn} /> </a>
-                            <a className='p-3 text-white' href=""> <FontAwesomeIcon size='2x' icon={faTwitter} /> </a>
+                            <a className='m-3 text-white' href="https://facebook.com"> <FontAwesomeIcon size='2x' icon={faFacebookSquare} /> </a>
+                            <a className='p-3 text-white' href="https://youtube.com"> <FontAwesomeIcon size='2x' icon={faYoutubeSquare} /> </a>
+                            <a className='p-3 text-white' href="http://linkedin.com"> <FontAwesomeIcon size='2x' icon={faLinkedinIn} /> </a>
+                            <a className='p-3 text-white' href="https://twitter.com"> <FontAwesomeIcon size='2x' icon={faTwitter} /> </a>
                         </div>
 
                     </div>

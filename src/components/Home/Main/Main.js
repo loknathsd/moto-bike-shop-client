@@ -9,7 +9,7 @@ const Main = () => {
                     <div className="col-md-6">
                         <img  className='img-fluid' src={banner} alt="" />
                     </div>
-                    <div className="col-md-6 text-white mt-5 pt-3 ">
+                    <div className="col-md-6 text-white mt-5 pt-3">
                         <h3>Go as Curiosity takes you</h3>
                         <p className='my-3'>The Complete Titanium exhaust system performance made by akrapovice is the best result of collaboration</p>
                         <button className='btn btn-outline-light'>Read More</button>
