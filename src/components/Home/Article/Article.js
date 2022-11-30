@@ -4,7 +4,7 @@ const Article = ({ article }) => {
     const { image, title } = article;
 
     return (
-        <div className='col-md-4 my-3 pb-5'>
+        <div className='col-md-6 col-lg-4  my-3 pb-5'>
             <div style={{border:'1px solid lightgray', padding:'10px',height:'430px',width:'350px'}}>
                 <img className='img-fluid' src={image} alt="" />
                 <div className='d-flex mt-2 fw-bold'>
