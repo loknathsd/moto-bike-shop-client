@@ -5,7 +5,7 @@ import userIcon from '../../../images/userIcon.png';
 const Review = ({reviewInfo}) => {
     const {name,review,rate} = reviewInfo;
     return (
-        <div className='col-md-4 my-2'>
+        <div className='col-md-6 col-lg-4 my-2'>
             <div style={{height:'250px',width:'350px'}} className="card">
                 <div className="card-body">
                 <Rating  ratingValue={rate} size='25' />

@@ -11,7 +11,7 @@ const Product = ({ product }) => {
         history.replace(`/purchase/${id}`)
     }
     return (
-        <Col xs={12} md={4}>
+        <Col xs={12} md={6} lg={4}>
             <Card  style={{ margin:'10px 0',  paddingBottom: '20px',height:'500px' , width:'350px' }}>
                 <Card.Img style={{ height: '250px', }} className="bg-light"  variant="top" src={img} />
                 <Card.Body className="">
