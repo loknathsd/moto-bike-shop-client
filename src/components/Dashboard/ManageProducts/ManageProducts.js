@@ -36,10 +36,10 @@ const ManageProducts = () => {
             <Navigation></Navigation>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-4 col-lg-3">
                         <Sidebar></Sidebar>
                     </div>
-                    <div className="col-md-9 shadow p-3">
+                    <div className="col-md-8 col-lg-9 shadow p-3">
                     <h2 className='text-center mb-4 text-secondary'> All Products</h2>
                             <Table striped bordered hover className='text-center'>
                                 <thead>

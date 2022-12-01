@@ -40,17 +40,17 @@ const Sidebar = () => {
     return (
         <Navbar className='bg-light pt-3'>
             <Container>
-                <Nav className="flex-column pb-5 sidebar-area">
+                <Nav className="flex-column  sidebar-area">
                     <h1 >Dashboard</h1>
                     <hr />
                     {!isAdmin && <NavLink to="/dashboard/myOrders"><span><FontAwesomeIcon icon={faShoppingBasket} /></span> My orders</NavLink>}
                     {!isAdmin && <NavLink to="/dashboard/addReview"><span><FontAwesomeIcon icon={faCommentAlt} /></span> Add Review</NavLink>}
 
-                    {isAdmin && <NavLink to="/dashboard/manageOrders" ><span><FontAwesomeIcon icon={faBars} /></span> Manage All Orders </NavLink>}
+                    {isAdmin && <NavLink to="/dashboard/manageOrders" ><span><FontAwesomeIcon icon={faBars} /></span> Edit all Orders </NavLink>}
                     {isAdmin && <NavLink to="/dashboard/addProduct" ><span><FontAwesomeIcon icon={faPlus} /></span>  Add Product </NavLink>}
-                    {isAdmin && <NavLink to="/dashboard/manageProducts" ><span> <FontAwesomeIcon icon={faBars} /></span> Manage Products </NavLink>}
+                    {isAdmin && <NavLink to="/dashboard/manageProducts" ><span> <FontAwesomeIcon icon={faBars} /></span> Edit Products </NavLink>}
                     {isAdmin && <NavLink to="/dashboard/makeAdmin" ><span><FontAwesomeIcon icon={faUserPlus} /></span> Make Admin</NavLink>}
-                    <NavLink onClick={handleLogOut} style={{ marginTop: '150px' }} to="" ><span><FontAwesomeIcon icon={faSignOutAlt} /></span> LogOut</NavLink>
+                    <NavLink onClick={handleLogOut} style={{ marginTop: '' }} to="" ><span><FontAwesomeIcon icon={faSignOutAlt} /></span> LogOut</NavLink>
 
                 </Nav>
             </Container>

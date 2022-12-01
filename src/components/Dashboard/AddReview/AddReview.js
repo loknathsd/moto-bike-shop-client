@@ -31,8 +31,6 @@ const AddReview = () => {
             })
 
     }
-
-
     const handleRating = (rate) => {
         setRating(rate)
     }
@@ -41,10 +39,10 @@ const AddReview = () => {
             <Navigation></Navigation>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-4 col-lg-3">
                         <Sidebar></Sidebar>
                     </div>
-                    <div className="col-md-9">
+                    <div className="col-md-8 col-lg-9">
                         <div className='w-75 mx-auto mt-5 p-5 shadow text-center'>
                             <h3 className=' mb-5'><span className='text-success'><FontAwesomeIcon icon={faUserEdit} /> </span><br /> User feedback</h3>
                             <form onSubmit={handleSubmit(onSubmit)} >

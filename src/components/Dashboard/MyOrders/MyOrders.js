@@ -40,13 +40,14 @@ const MyOrders = () => {
             <Navigation></Navigation>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-4 col-lg-3">
                         <Sidebar></Sidebar>
                     </div>
-                    <div className="col-md-9 shadow ">
+                    <div className="col-md-8 col-lg-9 shadow ">
                         <div>
                             <h2 className='text-center my-4 text-secondary'>{loggedInUser.name}'s Orders</h2>
-                            <Table striped bordered hover className='text-center'>
+                           <div className='table-responsive-sm'>
+                           <table className='table'>
                                 <thead>
                                     <tr >
                                         <th>#</th>
@@ -70,7 +71,8 @@ const MyOrders = () => {
                                     }
                                     
                                 </tbody>
-                            </Table>
+                            </table>
+                           </div>
                         </div>
                     </div>
                 </div>

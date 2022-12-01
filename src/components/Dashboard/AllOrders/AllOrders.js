@@ -37,13 +37,14 @@ const AllOrders = () => {
          <Navigation></Navigation>
         <div className="container">
             <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-4 col-lg-3">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="col-md-9 shadow ">
-                    <div>
+                <div className=" col-md-8 col-lg-8 shadow ">
+                    <div className=''>
                         <h2 className='text-center my-4 text-secondary'> All Orders</h2>
-                        <Table striped bordered hover className='text-center'>
+                      <div className='table-responsive-sm'>
+                      <table  className='table' >
                             <thead>
                                 <tr >
                                     <th>#</th>
@@ -61,13 +62,14 @@ const AllOrders = () => {
                                     <td >{order.email}</td>
                                     <td>{order.productName}</td>
                                     <td>$ {order.price}</td>
-                                    <td onClick={()=>handleDelete(order._id)} ><span className="bg-danger py-1 px-2 rounded text-light"><FontAwesomeIcon icon={faTrash} /></span> </td>
+                                    <td onClick={()=>handleDelete(order._id)} ><span className="bg-danger py-1 px-2 rounded text-light cursor-pointer"><FontAwesomeIcon icon={faTrash} /></span> </td>
                                 </tr>
                                     )
                                 }
                                 
                             </tbody>
-                        </Table>
+                        </table>
+                      </div>
                     </div>
                 </div>
             </div>

@@ -26,10 +26,10 @@ const MakeAdmin = () => {
             <Navigation></Navigation>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-4 col-lg-3">
                         <Sidebar></Sidebar>
                     </div>
-                    <div className="col-md-9 shadow px-5 pb-5 rounded">
+                    <div className="col-md-8 col-lg-9 shadow px-5 pb-5 rounded">
                         <h1 className='mt-4 text-secondary'>Make Admin</h1>
                         <hr style={{ width: '230px' }} />
                         <form className='w-50 mt-4' onSubmit={handleSubmit(onSubmit)} >

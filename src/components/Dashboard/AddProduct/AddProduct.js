@@ -35,11 +35,9 @@ const AddProduct = () => {
     }
 
     const handleFile = e => {
-        console.log(e.target.files[0])
         const imageData = new FormData();
         imageData.set('key', '27857de30973670589e3e40a5817902c')
         imageData.append('image', e.target.files[0])
-
         axios.post('https://api.imgbb.com/1/upload', imageData)
             .then(res => {
                 setImgURL(res.data.data.display_url)
@@ -53,10 +51,10 @@ const AddProduct = () => {
             <Navigation></Navigation>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-4 col-lg-3 ">
                         <Sidebar></Sidebar>
                     </div>
-                    <div className="col-md-9">
+                    <div className="col-lg-9 col-md-8 ">
                         <div className='w-75 mx-auto mt-5 p-5 shadow text-center'>
 
                             <h3 className=' mb-5'>Add Product</h3>
