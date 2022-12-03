@@ -10,13 +10,13 @@ const ManageProducts = () => {
     const [products,setProducts]=useState([])
 
     useEffect(()=>{
-        fetch('https://pacific-headland-82013.herokuapp.com/products')
+        fetch('https://moto-bike-shop-server.vercel.app/products')
         .then(res=>res.json())
         .then(data=>setProducts(data))
     },[])
 
     const handleProductDelete=(id)=>{
-        fetch(`https://pacific-headland-82013.herokuapp.com/deleteProduct /${id}`,{
+        fetch(`https://moto-bike-shop-server.vercel.app/deleteProduct /${id}`,{
             method:'DELETE',
             headers:{'Content-Type':'application/json'}
         })

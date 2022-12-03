@@ -19,9 +19,9 @@ import ManageProducts from './components/Dashboard/ManageProducts/ManageProducts
 import AllOrders from './components/Dashboard/AllOrders/AllOrders';
 import MakeAdmin from './components/Dashboard/MakeAdmin/MakeAdmin';
 
-export const ContextUser = createContext()
+export const ContextUser = createContext();
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({})
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <ContextUser.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>

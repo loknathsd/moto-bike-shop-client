@@ -12,7 +12,7 @@ const Purchase = () => {
     const history = useHistory();
     
     useEffect(()=>{
-        fetch(`https://pacific-headland-82013.herokuapp.com/product/${id}`,{
+        fetch(`https://moto-bike-shop-server.vercel.app/product/${id}`,{
             method:'GET',
             headers:{'Content-Type':'application/json'}
         })
@@ -24,7 +24,7 @@ const Purchase = () => {
     
     const { register, handleSubmit,reset,  formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('https://pacific-headland-82013.herokuapp.com/addPurchase',{
+        fetch('https://moto-bike-shop-server.vercel.app/addPurchase',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(data)
@@ -76,6 +76,7 @@ const Purchase = () => {
                                 {errors.phoneRequired && <span>This field is required</span>}
 
                                 <input className='form-control mt-3 btn btn-danger' type="submit" />
+                            
                             </form>
                         </div>
                     </div>

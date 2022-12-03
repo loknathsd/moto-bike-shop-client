@@ -6,7 +6,7 @@ const Reviews = () => {
     const [reviews,setReviews]=useState([])
 
     useEffect(()=>{
-        fetch('https://pacific-headland-82013.herokuapp.com/reviews')
+        fetch('https://moto-bike-shop-server.vercel.app/reviews')
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[])

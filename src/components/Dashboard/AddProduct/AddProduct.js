@@ -16,7 +16,7 @@ const AddProduct = () => {
             description: data.description,
             img: imgURL
         }
-        fetch('https://pacific-headland-82013.herokuapp.com/addProduct', {
+        fetch('https://moto-bike-shop-server.vercel.app/addProduct', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(productInfo)

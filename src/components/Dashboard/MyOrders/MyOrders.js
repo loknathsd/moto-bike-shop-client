@@ -13,14 +13,14 @@ const MyOrders = () => {
     const [myOrders,setMyOrders] = useState([])
 
     useEffect(()=>{
-       fetch('https://pacific-headland-82013.herokuapp.com/myOrders?email='+loggedInUser.email)
+       fetch('https://moto-bike-shop-server.vercel.app/myOrders?email='+loggedInUser.email)
        .then(res=>res.json())
        .then(data=>setMyOrders(data))
     },[])
 
 
     const handleDelete=(id)=>{
-        fetch(`https://pacific-headland-82013.herokuapp.com/delete/${id}`,{
+        fetch(`https://moto-bike-shop-server.vercel.app/delete/${id}`,{
             method:'DELETE',
             headers:{'Content-Type':'application/json'}
         })
