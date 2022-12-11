@@ -9,7 +9,7 @@ const Products = () => {
     const [products,setProducts]= useState([]);
 
     useEffect(()=>{
-        fetch('https://moto-bike-shop-server.vercel.app/products')
+        fetch('https://moto-bike-shop-server-production.up.railway.app/products')
         .then(res=>res.json())
         .then(data=>setProducts(data))
     },[])
