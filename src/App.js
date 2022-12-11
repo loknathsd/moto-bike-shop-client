@@ -8,7 +8,6 @@ import {
 import Home from './components/Home/Home/Home';
 import Login from './components/Dashboard/Login/Login/Login';
 import { createContext, useState } from 'react';
-import Products from './components/Home/Products/Products';
 import Purchase from './components/Home/Purchase/Purchase';
 import PrivateRoute from './components/Dashboard/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
@@ -18,6 +17,7 @@ import MyOrders from './components/Dashboard/MyOrders/MyOrders';
 import ManageProducts from './components/Dashboard/ManageProducts/ManageProducts';
 import AllOrders from './components/Dashboard/AllOrders/AllOrders';
 import MakeAdmin from './components/Dashboard/MakeAdmin/MakeAdmin';
+import ProductsPage from './pages/ProductsPage/ProductsPage';
 
 export const ContextUser = createContext();
 function App() {
@@ -25,9 +25,7 @@ function App() {
   return (
     <ContextUser.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-
         <Switch>
- 
           <Route path="/home">
             <Home></Home>
           </Route>
@@ -61,11 +59,12 @@ function App() {
           <Route path="/dashboard/makeAdmin">
             <MakeAdmin></MakeAdmin>
           </Route>
-        </Switch>
-        <Route exact path="*">
-            
+          <Route path="/products">
+            <ProductsPage />
           </Route>
-
+        </Switch>
+        <Route exact path="*"> 
+          </Route>
       </Router>
     </ContextUser.Provider>
   );

@@ -3,12 +3,11 @@ import { Button, Card, Col } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
 const Product = ({ product }) => {
-    const { name, img, price, engine,description,_id } = product;
-
+    const { name, img, price,description,_id } = product;
     const history=useHistory();
 
     const handlePurchase=(id)=>{
-        history.replace(`/purchase/${id}`)
+        history.replace(`/purchase/${id}`);
     }
     return (
         <Col xs={12} md={6} lg={4}>
@@ -22,9 +21,7 @@ const Product = ({ product }) => {
                         <Button onClick={()=>handlePurchase(_id)} variant="primary">Purchase</Button>
                     </Card.Text>
                 </Card.Body>
-            </Card>
-
-            
+            </Card>  
         </Col>
     );
 };

@@ -13,11 +13,11 @@ import { useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
-const app = initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig);
 
 const Login = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(ContextUser)
-    const [newUser, setNewUser] = useState(false)
+    const [loggedInUser, setLoggedInUser] = useContext(ContextUser);
+    const [newUser, setNewUser] = useState(false);
     const [user, setUser] = useState({
         name: '',
         email: '',
@@ -46,7 +46,12 @@ const Login = () => {
                     const userInfo = { ...user }
                     setUser(userInfo)
                     updateUserName(user.name)
-                    alert('Your are successfully SignUp')
+                    Swal.fire(
+                        'Successfully Log In!',
+                        '',
+                        'success'
+                    )
+                    setNewUser(!newUser);
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -54,7 +59,6 @@ const Login = () => {
                     alert(errorMessage)
 
                 });
-
         }
         if (!newUser && user.email && user.password) {
             const auth = getAuth();

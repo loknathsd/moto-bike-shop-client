@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-import { Table } from 'react-bootstrap';
 import Navigation from '../../Home/Navigation/Navigation';
 import Sidebar from '../Sidebar/Sidebar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,7 +12,7 @@ const AllOrders = () => {
         fetch('https://moto-bike-shop-server-production.up.railway.app/allOrders')
         .then(res=>res.json())
         .then(data=>setAllOrders(data))
-    },[])
+    },[]);
 
     const handleDelete=(id)=>{
         console.log(id)
@@ -23,15 +22,14 @@ const AllOrders = () => {
         })
         .then(result=>{
             const remain = allOrders.filter(order => order._id !== id);
-            setAllOrders(remain)
+            setAllOrders(remain);
             Swal.fire({
                 icon: 'success',
                 title: 'Deleted !!!',
-                text: 'Your Order has been deleted',
-                
-              })
-        })
-    }
+                text: 'Your Order has been deleted',   
+              });
+        });
+    };
     return (
         <section className='pt-5 mt-5'>
          <Navigation></Navigation>
@@ -65,8 +63,7 @@ const AllOrders = () => {
                                     <td onClick={()=>handleDelete(order._id)} ><span className="bg-danger py-1 px-2 rounded text-light cursor-pointer"><FontAwesomeIcon icon={faTrash} /></span> </td>
                                 </tr>
                                     )
-                                }
-                                
+                                } 
                             </tbody>
                         </table>
                       </div>

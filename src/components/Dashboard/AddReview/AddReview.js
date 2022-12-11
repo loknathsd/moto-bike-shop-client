@@ -9,13 +9,12 @@ import Navigation from '../../Home/Navigation/Navigation';
 import Sidebar from '../Sidebar/Sidebar';
 
 const AddReview = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(ContextUser)
-    const [rating, setRating] = useState(0)
+    const [loggedInUser, setLoggedInUser] = useContext(ContextUser);
+    const [rating, setRating] = useState(0);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = data => {
         data.rate = rating;
-        console.log(data);
         fetch('https://moto-bike-shop-server-production.up.railway.app/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -28,11 +27,10 @@ const AddReview = () => {
                     'success'
                 )
                 reset();
-            })
-
-    }
+            });
+    };
     const handleRating = (rate) => {
-        setRating(rate)
+        setRating(rate);
     }
     return (
         <section className='mt-5 pt-5'>

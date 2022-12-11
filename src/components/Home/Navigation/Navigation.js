@@ -33,7 +33,7 @@ const Navigation = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto fw-bold nav-area mt-2">
                         <NavLink className="px-4 my-2 active" to="/home">Home</NavLink>
-                        <NavLink className="px-4 my-2 active" to="/">Products</NavLink>
+                        <NavLink className="px-4 my-2 active" to="/products">Products</NavLink>
                         <NavLink className="px-4 my-2 active" to="/dashboard">Dashboard</NavLink>
                     </Nav>
                     <h4 className='mx-4 my-2'>{loggedInUser.name}</h4>
