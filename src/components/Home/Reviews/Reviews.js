@@ -6,7 +6,7 @@ const Reviews = () => {
     const [reviews,setReviews]=useState([])
 
     useEffect(()=>{
-        fetch('https://moto-bike-shop-server-production.up.railway.app/reviews')
+        fetch('https://moto-bike.onrender.com/reviews')
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[])

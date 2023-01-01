@@ -13,14 +13,14 @@ const MyOrders = () => {
     const [myOrders,setMyOrders] = useState([])
 
     useEffect(()=>{
-       fetch('https://moto-bike-shop-server-production.up.railway.app/myOrders?email='+loggedInUser.email)
+       fetch('https://moto-bike.onrender.com/myOrders?email='+loggedInUser.email)
        .then(res=>res.json())
        .then(data=>setMyOrders(data))
     },[])
 
 
     const handleDelete=(id)=>{
-        fetch(`https://moto-bike-shop-server-production.up.railway.app/delete/${id}`,{
+        fetch(`https://moto-bike.onrender.com/delete/${id}`,{
             method:'DELETE',
             headers:{'Content-Type':'application/json'}
         })

@@ -12,7 +12,7 @@ const Purchase = () => {
     const history = useHistory();
     
     useEffect(()=>{
-        fetch(`https://moto-bike-shop-server-production.up.railway.app/product/${id}`,{
+        fetch(`https://moto-bike.onrender.com/product/${id}`,{
             method:'GET',
             headers:{'Content-Type':'application/json'}
         })
@@ -24,7 +24,7 @@ const Purchase = () => {
     
     const { register, handleSubmit,reset,  formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('https://moto-bike-shop-server-production.up.railway.app/addPurchase',{
+        fetch('https://moto-bike.onrender.com/addPurchase',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(data)

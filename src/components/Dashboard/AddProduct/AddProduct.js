@@ -16,7 +16,7 @@ const AddProduct = () => {
             description: data.description,
             img: imgURL
         }
-        fetch('https://moto-bike-shop-server-production.up.railway.app/addProduct', {
+        fetch('https://moto-bike.onrender.com/addProduct', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(productInfo)
