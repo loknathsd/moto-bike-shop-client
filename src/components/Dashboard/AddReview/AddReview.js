@@ -9,7 +9,7 @@ import Navigation from '../../Home/Navigation/Navigation';
 import Sidebar from '../Sidebar/Sidebar';
 
 const AddReview = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(ContextUser);
+    const [loggedInUser] = useContext(ContextUser);
     const [rating, setRating] = useState(0);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 

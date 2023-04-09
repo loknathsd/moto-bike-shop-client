@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Loading from '../../Shared/Loading/Loading';
 import Review from '../Review/Review';
 
 
@@ -16,13 +17,13 @@ const Reviews = () => {
             <div className="container ">
                 <h1 className='text-center text-danger  '>REVIEWS</h1>
                 <hr style={{width:'70px',height:'5px',margin: 'auto'}} />
-
-                <div className='row mt-5'>
+                {reviews.length === 0 && <Loading /> }
+               {reviews.length >0 && <div className='row mt-5'>
                     {
                         reviews.map(review => <Review key={review._id} reviewInfo={review} ></Review>)
                     }
 
-                </div>
+                </div>}
             </div>
 
         </section>

@@ -1,5 +1,4 @@
 import React,{useState,useEffect,useContext} from 'react';
-import { Table } from 'react-bootstrap';
 import Navigation from '../../Home/Navigation/Navigation';
 import Sidebar from '../Sidebar/Sidebar';
 import {ContextUser} from '../../../App'
@@ -8,7 +7,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
 
 const MyOrders = () => {
-   const [loggedInUser,setLoggedInUser] = useContext(ContextUser)
+   const [loggedInUser] = useContext(ContextUser)
 
     const [myOrders,setMyOrders] = useState([])
 
@@ -16,7 +15,7 @@ const MyOrders = () => {
        fetch('https://moto-bike.onrender.com/myOrders?email='+loggedInUser.email)
        .then(res=>res.json())
        .then(data=>setMyOrders(data))
-    },[])
+    },[loggedInUser.email])
 
 
     const handleDelete=(id)=>{
@@ -47,7 +46,7 @@ const MyOrders = () => {
                         <div>
                             <h2 className='text-center my-4 text-secondary'>{loggedInUser.name}'s Orders</h2>
                            <div className='table-responsive-sm'>
-                           <table className='table'>
+                          {myOrders.length>0 && <table className='table'>
                                 <thead>
                                     <tr >
                                         <th>#</th>
@@ -71,7 +70,8 @@ const MyOrders = () => {
                                     }
                                     
                                 </tbody>
-                            </table>
+                            </table>}
+                            {myOrders.length ===0 && <h1 style={{textAlign:"center" ,marginTop:'3rem'}}>No ordered yet !!</h1> }
                            </div>
                         </div>
                     </div>

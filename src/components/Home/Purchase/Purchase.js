@@ -6,7 +6,7 @@ import { ContextUser } from '../../../App';
 import Swal from 'sweetalert2';
 
 const Purchase = () => {
-    const [loggedInUser,setLoggedInUser]= useContext(ContextUser);
+    const [loggedInUser]= useContext(ContextUser);
     const { id } = useParams();
     const [product,setProduct] = useState({});
     const history = useHistory();
@@ -18,7 +18,7 @@ const Purchase = () => {
         })
         .then(res=>res.json())
         .then(data=>setProduct(data))
-    },[])
+    },[id])
 
 
     
