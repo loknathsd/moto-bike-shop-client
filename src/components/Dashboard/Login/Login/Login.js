@@ -133,10 +133,7 @@ const Login = () => {
                         <br />
                         <input className='form-control btn btn-danger' type="submit" value={newUser? 'SignUp':'LogIn'}/>
                         <p className='mt-3'>{newUser ? 'Have you already an account?' : "Don't have an account?"} <Link onClick={() => setNewUser(!newUser)}>{newUser ? 'Login' : 'SignUp'}</Link></p>
-
                     </form>
-                    <h4>OR</h4>
-                    <button onClick={handleGoogleSignIn} style={{fontSize:'20px'}} className='btn btn-outline-secondary form-control fw-bold p-2'><FontAwesomeIcon style={{ color: 'red', marginRight: '12px' }} icon={faGoogle} size='1x' /> SignIn With Google</button>
                 </div>
             </div>
         </section>

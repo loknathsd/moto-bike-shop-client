@@ -76,7 +76,6 @@ const Purchase = () => {
                                 {errors.phoneRequired && <span>This field is required</span>}
 
                                 <input className='form-control mt-3 btn btn-danger' type="submit" />
-                            
                             </form>
                         </div>
                     </div>
