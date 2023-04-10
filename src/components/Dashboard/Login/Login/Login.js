@@ -1,9 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { useForm } from "react-hook-form";
-import { initializeApp } from 'firebase/app';
 import Navigation from '../../../Home/Navigation/Navigation';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import firebaseConfig from './firebase.config';
 import { Link } from 'react-router-dom';
 import { ContextUser } from '../../../../App';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
@@ -13,10 +10,8 @@ import { useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
-const app = initializeApp(firebaseConfig);
-
 const Login = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(ContextUser);
+    const [ setLoggedInUser] = useContext(ContextUser);
     const [newUser, setNewUser] = useState(false);
     const [user, setUser] = useState({
         name: '',
@@ -36,7 +31,7 @@ const Login = () => {
         setUser(newUser)
     }
 
-    const { register, watch, formState: { errors } } = useForm();
+    // const {  formState: {  } } = useForm();
 
     const handleSubmit = (e) => {
         if (newUser && user.email && user.password) {
@@ -54,7 +49,6 @@ const Login = () => {
                     setNewUser(!newUser);
                 })
                 .catch((error) => {
-                    const errorCode = error.code;
                     const errorMessage = error.message;
                     alert(errorMessage)
 
@@ -77,7 +71,6 @@ const Login = () => {
                     history.replace(from);
                 })
                 .catch((error) => {
-                    const errorCode = error.code;
                     const errorMessage = error.message;
                     alert(errorMessage)
 
@@ -113,6 +106,7 @@ const Login = () => {
             }).catch((error) => {
                 const errorMessage = error.message;
                 const email = error.email;
+                console.log(errorMessage,email)
                
             });
 

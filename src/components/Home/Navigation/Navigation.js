@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Container, Image, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { ContextUser } from '../../../App';
 import logo from '../../../images/icon/logo.png'

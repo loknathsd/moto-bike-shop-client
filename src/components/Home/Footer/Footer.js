@@ -1,7 +1,5 @@
-import { faFacebookSquare, faFontAwesome, faLinkedinIn, faTwitter, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookSquare, faLinkedinIn, faTwitter, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-// import { AiFillFacebook } from 'react-icons/ai';
 import React from 'react';
 
 const Footer = () => {
@@ -27,7 +25,6 @@ const Footer = () => {
                             <h6>Discount</h6>
                             <h6>Member-ship</h6>
                             <h6>24/7 support</h6>
-
                         </div>
                     </div>
                     <div className="col-md-3">
@@ -37,7 +34,6 @@ const Footer = () => {
                             <h6>Products</h6>
                             <h6>Help</h6>
                         </div>
-
                     </div>
                     <div className="col-md-3">
                         <h3>About us</h3>
