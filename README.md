@@ -1,8 +1,5 @@
 Project-Name : motoBike Shop
 
-Live Side link : <a href="https://motobike-769e1.web.app/">motoBike Shop</a>
-
-
 Features:
 
 <li>User can purchase product and add Review</li>
