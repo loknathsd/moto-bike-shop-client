@@ -7,7 +7,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const MakeAdmin = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('https://moto-bike.onrender.com/makeAdmin', {
+        fetch('https://moto-bike-shop-server.vercel.app/makeAdmin', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

@@ -15,7 +15,7 @@ const AddReview = () => {
 
     const onSubmit = data => {
         data.rate = rating;
-        fetch('https://moto-bike.onrender.com/addReview', {
+        fetch('https://moto-bike-shop-server.vercel.app/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

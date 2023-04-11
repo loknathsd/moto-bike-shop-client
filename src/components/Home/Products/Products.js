@@ -7,9 +7,10 @@ const Products = () => {
     const [products,setProducts]= useState([]);
 
     useEffect(()=>{
-        fetch('https://moto-bike.onrender.com/products')
+        fetch('https://moto-bike-shop-server.vercel.app/products')
         .then(res=>res.json())
         .then(data=>setProducts(data))
+        .catch(e=>console.log(e))
     },[]);
     return (
         <section id='products' className='my-5 py-5'>

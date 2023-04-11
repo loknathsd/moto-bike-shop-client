@@ -4,12 +4,13 @@ import Review from '../Review/Review';
 
 
 const Reviews = () => {
-    const [reviews,setReviews]=useState([])
+    const [reviews,setReviews]=useState([]);
 
     useEffect(()=>{
-        fetch('https://moto-bike.onrender.com/reviews')
+        fetch('https://moto-bike-shop-server.vercel.app/reviews')
         .then(res=>res.json())
         .then(data=>setReviews(data))
+        .catch(e=>console.log(e))
     },[])
 
     return (

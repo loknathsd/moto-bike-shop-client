@@ -10,13 +10,13 @@ const ManageProducts = () => {
     const [products,setProducts]=useState([])
 
     useEffect(()=>{
-        fetch('https://moto-bike.onrender.com/products')
+        fetch('https://moto-bike-shop-server.vercel.app/products')
         .then(res=>res.json())
         .then(data=>setProducts(data))
     },[])
 
     const handleProductDelete=(id)=>{
-        fetch(`https://moto-bike.onrender.com/deleteProduct /${id}`,{
+        fetch(`https://moto-bike-shop-server.vercel.app/deleteProduct /${id}`,{
             method:'DELETE',
             headers:{'Content-Type':'application/json'}
         })
