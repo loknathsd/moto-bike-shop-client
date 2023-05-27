@@ -27,12 +27,12 @@ const Navigation = () => {
     return (
         <Navbar className=" " bg="light" expand="lg" fixed="top">
             <Container>
-                <Navbar.Brand to="/home"><img style={{ height: '50px' }} src={logo} alt="" /> </Navbar.Brand>
+                <Navbar.Brand to="/"><img style={{ height: '50px' }} src={logo} alt="" /> </Navbar.Brand>
                 <Navbar.Brand to="/"><h1 style={{ fontFamily: 'fantasy', color: '#FF1493',paddingTop:'' }}>MotoBike</h1></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto fw-bold nav-area mt-2">
-                        <NavLink className="px-4 my-2 active" to="/home">Home</NavLink>
+                        <NavLink className="px-4 my-2 active" to="/">Home</NavLink>
                         <NavLink className="px-4 my-2 active" to="/products">Products</NavLink>
                         <NavLink className="px-4 my-2 active" to="/dashboard">Dashboard</NavLink>
                     </Nav>

@@ -9,14 +9,14 @@ const AllOrders = () => {
     const [allOrders,setAllOrders]=useState([]);
      
     useEffect(()=>{
-        fetch('https://moto-bike-shop-server.vercel.app/allOrders')
+        fetch('https://moto-bike-shop-server-production.up.railway.app/allOrders')
         .then(res=>res.json())
         .then(data=>setAllOrders(data))
     },[]);
 
     const handleDelete=(id)=>{
         console.log(id)
-        fetch(`https://moto-bike-shop-server.vercel.app/delete/${id}`,{
+        fetch(`https://moto-bike-shop-server-production.up.railway.app/delete/${id}`,{
             method:'DELETE',
             headers:{'Content-Type':'application/json'}
         })

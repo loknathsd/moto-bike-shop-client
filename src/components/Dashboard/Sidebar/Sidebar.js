@@ -13,7 +13,7 @@ const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState(false)
 
     useEffect(() => {
-        fetch('https://moto-bike-shop-server.vercel.app/isAdmin', {
+        fetch('https://moto-bike-shop-server-production.up.railway.app/isAdmin', {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
